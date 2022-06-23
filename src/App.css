@@ -1,38 +1,77 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./media/5073414.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  background-color: #1b2430;
+  padding: 30px 40px;
+  color: #a12568;
   text-align: center;
+  height: 100px;
+  opacity: 0.6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Floats nach der Kopfzeile löschen */
+
+header:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  margin-top: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer {
+  text-align: center;
+  border-top: 1px solid rgb(200, 200, 200);
 }
 
-.App-link {
-  color: #61dafb;
+footer p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 0.5em;
+  color: #fec260;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style den Add Knopp */
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #3e065f;
+  color: #fec260;
+
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+/* Style die Eingabe */
+
+#eingabeText {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  background-color: #51557e;
+  color: #fec260;
 }
